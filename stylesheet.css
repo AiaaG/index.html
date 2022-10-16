@@ -1,0 +1,20 @@
+*{
+    margin-top: 50px;
+}
+body{
+    text-align: center;
+}
+#heart1{
+    animation-name: heart1;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    
+}
+@keyframes heart1{
+    0%{color:rgb(255,80,164);}
+    50% {color: crimson;}
+    75%{color:darksalmon;}
+    100%{color:blanchedalmond;}
+
+
+}

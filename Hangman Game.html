@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link href="./Css/Stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Hangman Game</h1>
+
+    <P class="tm">Aiana &#153;</P>
+    <div class="conteiner_header">
+        <div class="nav_bar">
+            <img class="nomargin" src="./Photo/A 2.png" height="200">
+            <p><a class="hlink" href="./Home.html">Home</a></p>
+            <p><a class="plink" href="./Poems.html">Poems</a></p>
+            <p><a class="llink"href="./Le.html">Letter</a></p>
+            <p><a class="glink" href="Hangman Game.html">Game</a></p>
+            <p><a class="clink" href="./Contacts.html">Contacts</a></p>
+            </div>
+    </div>
+
+    <script>
+        function newContent() {
+        document.open();
+        document.write("Guess a letter, or click Cancel to exit the game.");
+        document.close();
+      }
+        var words=[
+            "Canada",
+            "Liberty",
+            "Argentina",
+            "Love",
+            "Hapiness"
+        ];
+        var word=words[Math.floor(Math.random()*words.length)];
+        var answerArray=[];
+        for (var i=0; i<word.length; i++){
+            answerArray[i]="_";
+        }
+        var remainingLetters= word.length;
+        while(remainingLetters>0){
+            alert(answerArray.join(""));
+            var guess=prompt("Guess a letter, or click Cancel to exit the game.");
+            if (guess===null){
+                break;
+            }
+            else if(guess.length!==1){
+                alert("Please enter a single letter.");
+            }
+            else{
+                for (var j =0; j<word.length; j++){
+                    if (word[j]===guess){
+                        answerArray[j]=guess;
+                        remainingLetters--;
+                    }
+                }
+            }
+        
+        }
+        alert(answerArray.join(""));
+        alert("Good job! The answer was " + word );
+        
+        </script>
+         <p>
+            <a href="./Contacts.html" target="_self" class="page2"><strong>Next</strong></a>
+            </p>
+</body>
+</html>

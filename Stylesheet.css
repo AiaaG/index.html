@@ -6,7 +6,7 @@ body{
    .letter{
     margin-left: 390px;
     margin-right: 390px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial';
     background-color: beige;
     border: inset green;
     margin-top: 50px;
